@@ -11,6 +11,9 @@ import Helper from "./components/Helper";
 import Needer from "./components/Needer";
 import Search from "./components/Search";
 import Login from "./components/Login";
+import Offer from './components/Offer';
+
+
 
 ReactDOM.render(
   <Router>
@@ -36,6 +39,9 @@ ReactDOM.render(
               </Route>
               <Route path="/search">
                   <Search />
+              </Route>
+              <Route path="/offer">
+                  <Offer/>
               </Route>
           </Switch>
       </Grid>

@@ -3,27 +3,40 @@ import React, {MouseEvent} from 'react';
 import {Link, Route} from "react-router-dom";
 import { List,ListItem ,ListItemAvatar,ListItemText, Avatar,Divider,Grid } from '@material-ui/core';
 
+
+import { Redirect } from "react-router-dom";
+
+
+
 import Header from './Header';
 
 interface ComponentProps {}
 interface ComponentState {}
 
-class Needer extends React.Component<ComponentProps, ComponentState> {
 
+
+class Needer extends React.Component<ComponentProps, ComponentState> {
+    state = { redirect: null };
+    
     handleToggle(event: MouseEvent) {
-        alert('Weiter');
+        this.setState({ redirect: "/offer" });
 
     };
 
     render() {
    
-
+        if (this.state.redirect) {
+            // wieso muss das denn so unschön sein?
+            // @ts-ignore
+            return <Redirect to={this.state.redirect} />
+        }
+     
    
         return (
             <>
              <Header />
                 <List >
-                    <ListItem button onClick={this.handleToggle}>
+                    <ListItem button onClick={this.handleToggle.bind(this)}>
                     <ListItemAvatar>
                         <Avatar alt="" src="/media/avatar/1.jpg" />
                     </ListItemAvatar>
@@ -38,7 +51,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
 
                     <Divider variant="inset" component="li" />
 
-                    <ListItem button onClick={this.handleToggle}>
+                    <ListItem button onClick={this.handleToggle.bind(this)}>
                     <ListItemAvatar>
                         <Avatar alt="" src="/media/avatar/2.jpg" />
                     </ListItemAvatar>
@@ -52,7 +65,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
 
                     <Divider variant="inset" component="li" />
 
-                    <ListItem button onClick={this.handleToggle}>
+                    <ListItem button onClick={this.handleToggle.bind(this)}>
 
                     <ListItemAvatar>
                         <Avatar alt="" src="/media/avatar/3.jpg" />

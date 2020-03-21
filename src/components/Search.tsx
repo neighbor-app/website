@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import { TextField, Grid, Button, Divider } from '@material-ui/core';
+import { TextField, Grid, Button, Divider, Typography } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import DateFnsUtils from '@date-io/date-fns';
 
@@ -26,11 +26,9 @@ class Search extends React.Component<ComponentProps, ComponentState> {
    
 
     handleDateChange( date :any ) {
-      console.log(date)
-      console.log(this);
+
         this.selectedDate = date;
 
-        console.log(this.selectedDate);
     }
 
     stores = [
@@ -41,23 +39,14 @@ class Search extends React.Component<ComponentProps, ComponentState> {
       'Fressnapf',
       'Edeka'
     ];
-    
-    styles = {
-      container : {
-        width:"100%",
-        maxWidth:"500px"
-      },
-      header : {
-        color:"#3f51b5"
-      }
-    };
+
 
     render() {
         return (
             <>
             <Header/>
-            <div style={this.styles.container}>
-              <h1 style={this.styles.header}>Finde Hilfe in deiner Umgebung</h1>
+            <div style={{ width:"100%",maxWidth:"500px" , marginTop:"40px"}}>
+            <Typography variant="h4" style={{ color:"#3f51b5" ,paddingBottom: "50px"}}>Finde Hilfe in deiner Umgebung</Typography>
             <Grid container direction="column" spacing={4} justify="center" alignItems="stretch">
               
               <Grid item>
@@ -65,7 +54,7 @@ class Search extends React.Component<ComponentProps, ComponentState> {
                       <KeyboardDatePicker
                 
                     disablePast={true}
-                  
+                    style={{display: 'flex'}}
                     format="dd/MM/yyyy"
                     margin="normal"
                     id="date-picker-"
