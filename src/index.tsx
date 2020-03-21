@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import Helper from "./components/Helper";
 import Needer from "./components/Needer";
 import Search from "./components/Search";
+import NewHelp from './components/NewHelp';
 import Login from "./components/Login";
 
 ReactDOM.render(
@@ -36,6 +37,9 @@ ReactDOM.render(
               </Route>
               <Route path="/search">
                   <Search />
+              </Route>
+              <Route path="/new-help">
+                  <NewHelp />
               </Route>
           </Switch>
       </Grid>
