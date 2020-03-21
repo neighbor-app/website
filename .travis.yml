@@ -6,7 +6,7 @@ cache:
     - node_modules
 
 script:
-  - npm run build || true
+  - yarn build
 
 deploy:
   provider: pages

@@ -13,8 +13,7 @@ import Search from "./components/Search";
 import NewHelp from './components/NewHelp';
 import Login from "./components/Login";
 import Offer from './components/Offer';
-
-
+import UserView from "./components/UserView";
 
 ReactDOM.render(
   <Router>
@@ -46,6 +45,9 @@ ReactDOM.render(
               </Route>
               <Route path="/new-help">
                   <NewHelp />
+              </Route>
+              <Route path="/user-detail/:id">
+                  <UserView />
               </Route>
           </Switch>
       </Grid>
