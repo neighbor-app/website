@@ -42,25 +42,33 @@ class Search extends React.Component<ComponentProps, ComponentState> {
       'Edeka'
     ];
     
-    searchContainer = {
-      width:"100%",
-      maxWidth:"500px"
+    styles = {
+      container : {
+        width:"100%",
+        maxWidth:"500px"
+      },
+      header : {
+        color:"#3f51b5"
+      }
     };
 
     render() {
         return (
             <>
             <Header/>
-            <div style={this.searchContainer}>
+            <div style={this.styles.container}>
+              <h1 style={this.styles.header}>Finde Hilfe in deiner Umgebung</h1>
             <Grid container direction="column" spacing={4} justify="center" alignItems="stretch">
+              
               <Grid item>
-              <MuiPickersUtilsProvider utils={DateFnsUtils}>
+              <MuiPickersUtilsProvider  utils={DateFnsUtils}>
                       <KeyboardDatePicker
+                
                     disablePast={true}
-                    variant="inline"
+                  
                     format="dd/MM/yyyy"
                     margin="normal"
-                    id="date-picker-inline"
+                    id="date-picker-"
                     label="Wann brauchst du deinen Einkauf"
                     value={this.selectedDate}
                     onChange={this.handleDateChange.bind(this)}
