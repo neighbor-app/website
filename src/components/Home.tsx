@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import Grid from "@material-ui/core/Grid";
 import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { ListItemAvatar,Avatar,Divider } from '@material-ui/core';

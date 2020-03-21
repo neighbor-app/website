@@ -1,9 +1,6 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import { Grid, Avatar, Button, List, ListItem, Divider, Typography } from '@material-ui/core';
+import { Grid, Avatar, Button, Typography } from '@material-ui/core';
 import Header from './Header';
-
-import { withRouter } from "react-router-dom";
 
 interface ComponentProps {}
 interface ComponentState {}
