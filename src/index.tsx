@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import Home from "./components/Home";
 import Helper from "./components/Helper";
 import Needer from "./components/Needer";
+import Search from "./components/Search";
 import Login from "./components/Login";
 
 ReactDOM.render(
@@ -32,6 +33,9 @@ ReactDOM.render(
               </Route>
               <Route path="/login">
                   <Login />
+              </Route>
+              <Route path="/search">
+                  <Search />
               </Route>
           </Switch>
       </Grid>
