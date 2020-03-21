@@ -1,13 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Grid from "@material-ui/core/Grid";
+
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+import Home from "./components/Home";
+import Helper from "./components/Helper";
+import Needer from "./components/Needer";
+import Login from "./components/Login";
 
 ReactDOM.render(
   <Router>
-    <App />
+      <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+          style={{flexGrow: 1}}
+      >
+          <Switch>
+              <Route exact path="/">
+                  <Home />
+              </Route>
+              <Route path="/helper">
+                  <Helper />
+              </Route>
+              <Route path="/needer">
+                  <Needer />
+              </Route>
+              <Route path="/login">
+                  <Login />
+              </Route>
+          </Switch>
+      </Grid>
   </Router>,
   document.getElementById('root')
 );
