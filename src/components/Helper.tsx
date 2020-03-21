@@ -26,7 +26,7 @@ class Helper extends React.Component<ComponentProps, ComponentState> {
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         <List >
-                            <ListItem button component={Link} to="/user-detail/1">
+                            <ListItem button component={Link} to="/website/user-detail/1">
                                 <ListItemAvatar>
                                     <Avatar alt="" src="/media/avatar/1.jpg" />
                                 </ListItemAvatar>
@@ -71,7 +71,7 @@ class Helper extends React.Component<ComponentProps, ComponentState> {
                         </List>
                     </Grid>
                     <Grid item xs={12} style={{margin: '10px'}}>
-                        <Button color="primary" variant="contained" component={Link} to="/new-help">Neue Hilfe Anbieten</Button>
+                        <Button color="primary" variant="contained" component={Link} to="/website/new-help">Neue Hilfe Anbieten</Button>
                     </Grid>
                 </Grid>
             </>

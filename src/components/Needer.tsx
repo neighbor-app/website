@@ -18,7 +18,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
     state = { redirect: null };
     
     handleToggle(event: MouseEvent) {
-        this.setState({ redirect: "/offer" });
+        this.setState({ redirect: "/website/offer" });
 
     };
 

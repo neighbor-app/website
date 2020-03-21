@@ -120,7 +120,7 @@ class Login extends React.Component<ComponentProps, ComponentState> {
         return (
             <>
                 <Header />
-                {(this.state.loggedIn) ? <Redirect to="/" /> : null}
+                {(this.state.loggedIn) ? <Redirect to="/website/" /> : null}
                 <form
                     noValidate
                     autoComplete="off"

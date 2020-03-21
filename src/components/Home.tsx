@@ -28,7 +28,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                 >
                     <Button
                         component={Link}
-                        to="/helper"
+                        to="/website/helper"
                         color="primary"
                         variant="contained"
                         style={{position: 'relative', top: '-50px'}}
@@ -39,7 +39,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                 <Box>
                     <Button
                         component={Link}
-                        to="/search"
+                        to="/website/search"
                         color="primary"
                         variant="contained"
                         style={{position: 'relative', top: '-50px'}}

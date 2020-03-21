@@ -25,28 +25,28 @@ ReactDOM.render(
           style={{flexGrow: 1}}
       >
           <Switch>
-              <Route exact path="/">
+              <Route exact path="/website/">
                   <Home />
               </Route>
-              <Route path="/helper">
+              <Route path="/website/helper">
                   <Helper />
               </Route>
-              <Route path="/needer">
+              <Route path="/website/needer">
                   <Needer />
               </Route>
-              <Route path="/login">
+              <Route path="/website/login">
                   <Login />
               </Route>
-              <Route path="/search">
+              <Route path="/website/search">
                   <Search />
               </Route>
-              <Route path="/offer">
+              <Route path="/website/offer">
                   <Offer/>
               </Route>
-              <Route path="/new-help">
+              <Route path="/website/new-help">
                   <NewHelp />
               </Route>
-              <Route path="/user-detail/:id">
+              <Route path="/website/user-detail/:id">
                   <UserView />
               </Route>
           </Switch>

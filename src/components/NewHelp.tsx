@@ -102,7 +102,7 @@ class NewHelp extends React.Component<ComponentProps, ComponentState> {
                         <Divider/>
                         <Grid item container direction="row"  justify="center" alignItems="center">
                             <Grid item >
-                                <Link to="/helper"><Button variant="contained" color="primary">Hinzufügen</Button></Link>
+                                <Link to="/website/helper"><Button variant="contained" color="primary">Hinzufügen</Button></Link>
                             </Grid>
                         </Grid>
                     </Grid>

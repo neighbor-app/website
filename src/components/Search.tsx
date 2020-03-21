@@ -76,7 +76,7 @@ class Search extends React.Component<ComponentProps, ComponentState> {
                 <Divider/>
                   <Grid item container direction="row"  justify="center" alignItems="center">
                     <Grid item >
-                    <Link to="/needer"><Button variant="contained" color="primary">Suchen</Button></Link>
+                    <Link to="/website/needer"><Button variant="contained" color="primary">Suchen</Button></Link>
                     </Grid>
                   </Grid>
                 </Grid> 
