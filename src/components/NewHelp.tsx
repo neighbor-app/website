@@ -90,6 +90,9 @@ class NewHelp extends React.Component<ComponentProps, ComponentState> {
                             <TextField label="Für wie viele € kannst du einkaufen?" defaultValue="10" type="number" style={{width: '350px'}}/>
                         </Grid>
                         <Grid item>
+                            <TextField label="Beschreibung deines Angebotes?" style={{width: '350px'}}/>
+                        </Grid>
+                        <Grid item>
                             <Autocomplete
 
                                 options={ this.stores }
