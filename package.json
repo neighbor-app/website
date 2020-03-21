@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Es ist eine Plattform wo Personen angeben können, dass sie morgen einkaufen und wie viel Platz sie noch haben und auch umgedreht, ich kann angeben das ich Einkauf benötige.",
   "license": "MIT",
+  "homepage": "https://neighbor-app.github.io/",
   "dependencies": {
     "@date-io/date-fns": "1.x",
     "@material-ui/core": "^4.9.7",
