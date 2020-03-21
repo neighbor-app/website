@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import Helper from "./components/Helper";
 import Needer from "./components/Needer";
 import Search from "./components/Search";
+import NewHelp from './components/NewHelp';
 import Login from "./components/Login";
 import Offer from './components/Offer';
 
@@ -42,6 +43,9 @@ ReactDOM.render(
               </Route>
               <Route path="/offer">
                   <Offer/>
+              </Route>
+              <Route path="/new-help">
+                  <NewHelp />
               </Route>
           </Switch>
       </Grid>
