@@ -51,7 +51,7 @@ class Offer extends React.Component<ComponentProps, ComponentState> {
                     <Typography variant="subtitle2">Ich kann für dich einen Einkauf für 20 € erledigen, Ich werden bei Rewe und Lidl gegen 15:00 einkaufen </Typography>
                     </Grid>
                             <Grid item>
-                                <Button variant="contained" color="primary">Nachricht senden</Button>
+                                <Link to="chat"><Button variant="contained" color="primary">Nachricht senden</Button></Link>
                             </Grid>
                             <Grid item>
                                 <Button variant="contained" color="primary" onClick={this.handleRequest}>Einkauf anfragen</Button>

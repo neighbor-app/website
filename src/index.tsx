@@ -13,6 +13,7 @@ import Search from "./components/Search";
 import NewHelp from './components/NewHelp';
 import Login from "./components/Login";
 import Offer from './components/Offer';
+import Chat from './components/Chat';
 
 
 
@@ -46,6 +47,9 @@ ReactDOM.render(
               </Route>
               <Route path="/new-help">
                   <NewHelp />
+              </Route>
+              <Route path="/chat">
+                  <Chat />
               </Route>
           </Switch>
       </Grid>

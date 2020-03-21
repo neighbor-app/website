@@ -35,7 +35,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
         return (
             <>
              <Header />
-                <List >
+                <List style={{maxWidth:"500px",width:"100%"}} >
                     <ListItem button onClick={this.handleToggle.bind(this)}>
                     <ListItemAvatar>
                         <Avatar alt="" src="/media/avatar/1.jpg" />
