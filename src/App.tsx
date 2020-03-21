@@ -52,17 +52,6 @@ class App extends React.Component<ComponentProps, ComponentState> {
               <Button color="inherit">Login</Button>
             </Toolbar>
           </AppBar>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/helper">Helper</Link>
-            </li>
-            <li>
-              <Link to="/needer">Needer</Link>
-            </li>
-          </ul>
           <Switch>
             <Route exact path="/">
               <Home />
