@@ -26,7 +26,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                         <Typography variant="h1" style={{
                             color: '#fff'
                         }}>
-                            Headline text
+                            Nachbarn wollen helfen
                         </Typography>
                     </Grid>
                     <Grid item xs={12} style={{textAlign: 'center'}}>
