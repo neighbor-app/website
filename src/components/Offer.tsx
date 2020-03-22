@@ -1,10 +1,8 @@
 import React from 'react';
 
 import {Link} from "react-router-dom";
-import { Grid, Avatar, Button, List, ListItem, Divider, Typography, SnackbarContent, IconButton, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@material-ui/core';
+import { Grid, Avatar, Button,  Typography, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@material-ui/core';
 import Header from './Header';
-import Snackbar from '@material-ui/core/Snackbar';
-import CloseIcon from '@material-ui/icons/Close';
 
 interface ComponentProps {}
 interface ComponentState {

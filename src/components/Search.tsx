@@ -43,7 +43,9 @@ class Search extends React.Component<ComponentProps, ComponentState> {
             <>
             <Header/>
             <div style={{ width:"100%",maxWidth:"500px" , marginTop:"40px"}}>
-            <Typography variant="h4" style={{ color:"#3f51b5" ,paddingBottom: "50px"}}>Finde Hilfe in deiner Umgebung</Typography>
+            <Typography variant="h4" style={{ textAlign:"center", color:"#3f51b5" ,paddingBottom: "50px"}}>Finde Hilfe in deiner Umgebung</Typography>
+
+
             <Grid container direction="column" spacing={4} justify="center" alignItems="stretch">
               
               <Grid item>

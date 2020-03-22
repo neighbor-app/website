@@ -15,6 +15,7 @@ import Login from "./components/Login";
 import Offer from './components/Offer';
 import Chat from './components/Chat';
 import UserView from './components/UserView';
+import SelectCategory from './components/Category';
 
 
 
@@ -39,6 +40,9 @@ ReactDOM.render(
               </Route>
               <Route path="/website/login">
                   <Login />
+              </Route>
+              <Route path="/website/select">
+                  <SelectCategory />
               </Route>
               <Route path="/website/search">
                   <Search />

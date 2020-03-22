@@ -1,10 +1,7 @@
 
-import React, {MouseEvent} from 'react';
-import {Link, Route} from "react-router-dom";
-import { List,ListItem ,ListItemAvatar,ListItemText, Avatar,Divider,Grid, TextField, Card, CardContent, CardActions } from '@material-ui/core';
+import React from 'react';
+import { TextField, Card, CardContent, CardActions } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
-
 import Header from './Header';
 import SendIcon from '@material-ui/icons/Send';
 
