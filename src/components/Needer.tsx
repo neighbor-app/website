@@ -32,7 +32,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
         this.onGMarkerClick = this.onGMarkerClick.bind(this);
         this.handleGeolocation = this.handleGeolocation.bind(this);
 
-       // navigator.geolocation.getCurrentPosition(this.handleGeolocation);
+       navigator.geolocation.getCurrentPosition(this.handleGeolocation);
     }
 
     handleGeolocation(position: Position) {
@@ -59,7 +59,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                     <Grid item xs={12} style={{ height: '50vh', width: '100%' }}>
                         <GoogleMapReact
                             bootstrapURLKeys={{ key: 'AIzaSyDawgu3zHf0qoi6ch1TGl35rO9viDOu5bQ' }}
-                            defaultCenter={{lat: this.state.lat, lng: this.state.lng}}
+                            center={{lat: this.state.lat, lng: this.state.lng}}
                             defaultZoom={15}
                             yesIWantToUseGoogleMapApiInternals
                             onChildClick={this.onGMarkerClick}
