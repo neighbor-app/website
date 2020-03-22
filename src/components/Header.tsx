@@ -79,7 +79,9 @@ class Header extends React.Component<ComponentProps, ComponentState> {
                 </Helmet>
                 <AppBar position="static">
                     <Toolbar>
-                        <Img src={logo} style={{height: '40px', marginRight: '10px', marginLeft: '-10px'}} />
+                        <Link to="/website/">
+                            <Img src={logo} style={{height: '40px', marginRight: '10px', marginLeft: '-10px'}} />
+                        </Link>
                         <IconButton edge="start" color="inherit" aria-label="menu" onClick={this.handleClick}>
                             <MenuIcon />
                         </IconButton>
