@@ -1,7 +1,6 @@
 
 import React, {MouseEvent} from 'react';
-import {Link, Route} from "react-router-dom";
-import { List,ListItem ,ListItemAvatar,ListItemText, Avatar,Divider,Grid } from '@material-ui/core';
+import { List,ListItem ,ListItemAvatar,ListItemText, Avatar,Divider } from '@material-ui/core';
 
 
 import { Redirect } from "react-router-dom";
@@ -19,7 +18,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
     state = { redirect: null };
     
     handleToggle(event: MouseEvent) {
-        this.setState({ redirect: "/offer" });
+        this.setState({ redirect: "/website/offer" });
 
     };
 

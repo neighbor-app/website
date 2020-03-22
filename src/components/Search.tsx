@@ -6,12 +6,9 @@ import DateFnsUtils from '@date-io/date-fns';
 
 import {
     MuiPickersUtilsProvider,
-    KeyboardTimePicker,
     KeyboardDatePicker,
-
   } from '@material-ui/pickers';
 import Header from './Header';
-import { makeStyles } from '@material-ui/core/styles';
 
 
 interface ComponentProps {}
@@ -79,7 +76,7 @@ class Search extends React.Component<ComponentProps, ComponentState> {
                 <Divider/>
                   <Grid item container direction="row"  justify="center" alignItems="center">
                     <Grid item >
-                    <Link to="/needer"><Button variant="contained" color="primary">Suchen</Button></Link>
+                    <Link to="/website/needer"><Button variant="contained" color="primary">Suchen</Button></Link>
                     </Grid>
                   </Grid>
                 </Grid> 

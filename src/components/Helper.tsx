@@ -71,7 +71,7 @@ class Helper extends React.Component<ComponentProps, ComponentState> {
                         </List>
                     </Grid>
                     <Grid item xs={12} style={{margin: '10px'}}>
-                        <Button color="primary" variant="contained" component={Link} to="/new-help">Neue Hilfe Anbieten</Button>
+                        <Button color="primary" variant="contained" component={Link} to="/website/new-help">Neue Hilfe Anbieten</Button>
                     </Grid>
                 </Grid>
             </>

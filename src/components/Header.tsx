@@ -86,9 +86,9 @@ class Header extends React.Component<ComponentProps, ComponentState> {
                             open={this.state.menuOpen}
                             onClose={this.handleClose}
                         >
-                            <MenuItem component={Link} to="/" onClick={this.handleClose}>Startseite</MenuItem>
-                            <MenuItem component={Link} to="/helper" onClick={this.handleClose}>Helfer</MenuItem>
-                            <MenuItem component={Link} to="/needer" onClick={this.handleClose}>Hilfe suchend</MenuItem>
+                            <MenuItem component={Link} to="/website/" onClick={this.handleClose}>Startseite</MenuItem>
+                            <MenuItem component={Link} to="/website/helper" onClick={this.handleClose}>Helfer</MenuItem>
+                            <MenuItem component={Link} to="/website/needer" onClick={this.handleClose}>Hilfe suchend</MenuItem>
                         </Menu>
                         <Typography variant="h6" style={{flexGrow: 1}}>
                             Neighbor App
@@ -101,7 +101,7 @@ class Header extends React.Component<ComponentProps, ComponentState> {
                                 :
                                 <Button
                                     component={Link}
-                                    to="/login"
+                                    to="/website/login"
                                     color="inherit">Login</Button>
                         }
                     </Toolbar>

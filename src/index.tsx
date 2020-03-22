@@ -13,13 +13,10 @@ import Search from "./components/Search";
 import NewHelp from './components/NewHelp';
 import Login from "./components/Login";
 import Offer from './components/Offer';
-<<<<<<< HEAD
 import Chat from './components/Chat';
+import UserView from './components/UserView';
 
 
-=======
-import UserView from "./components/UserView";
->>>>>>> f94d69222efe8de78ef3e48229379522123ca8aa
 
 ReactDOM.render(
   <Router>
@@ -31,34 +28,35 @@ ReactDOM.render(
           style={{flexGrow: 1}}
       >
           <Switch>
-              <Route exact path="/">
+              <Route exact path="/website/">
                   <Home />
               </Route>
-              <Route path="/helper">
+              <Route path="/website/helper">
                   <Helper />
               </Route>
-              <Route path="/needer">
+              <Route path="/website/needer">
                   <Needer />
               </Route>
-              <Route path="/login">
+              <Route path="/website/login">
                   <Login />
               </Route>
-              <Route path="/search">
+              <Route path="/website/search">
                   <Search />
               </Route>
-              <Route path="/offer">
+              <Route path="/website/offer">
                   <Offer/>
               </Route>
-              <Route path="/new-help">
+              <Route path="/website/new-help">
                   <NewHelp />
               </Route>
-<<<<<<< HEAD
-              <Route path="/chat">
+
+              <Route path="/website/chat">
                   <Chat />
-=======
-              <Route path="/user-detail/:id">
+                  </Route>
+              <Route path="/website/user-detail/:id">
+
                   <UserView />
->>>>>>> f94d69222efe8de78ef3e48229379522123ca8aa
+
               </Route>
           </Switch>
       </Grid>
