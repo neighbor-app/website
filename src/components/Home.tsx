@@ -36,7 +36,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                                     to="/website/helper"
                                     color="primary"
                                     variant="contained"
-                                    style={{ height: '100px', width: '250px', fontSize: '18px'}}
+                                    style={{ height: '100px', width: '350px', fontSize: '26px'}}
                                 >
                                     Hilfe anbieten
                             </Button>
@@ -47,7 +47,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                                     to="/website/select"
                                     color="primary"
                                     variant="contained"
-                                    style={{ height: '100px', width: '250px', fontSize: '18px'}}
+                                    style={{ height: '100px', width: '350px', fontSize: '26px'}}
                                 >
                                     Hilfe suchen
                             </Button>
