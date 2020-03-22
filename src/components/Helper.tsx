@@ -26,7 +26,7 @@ class Helper extends React.Component<ComponentProps, ComponentState> {
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         <List >
-                            <ListItem button component={Link} to="/website/user-detail/1">
+                            <ListItem button onClick={this.handleToggle}>
                                 <ListItemAvatar>
                                     <Avatar alt="" src="/media/avatar/1.jpg" />
                                 </ListItemAvatar>
