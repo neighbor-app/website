@@ -21,10 +21,10 @@ class UserView extends React.Component<RouteComponentProps, ComponentState> {
                 <Header/>
                 <Grid container spacing={2} style={{margin: '10px'}}>
                     <Grid item xs={2}>
-                        <Avatar alt="" src={avatarImg001} />
+                        <Avatar alt="" src={avatarImg001} style={{width:'100px',height:'100px'}}/>
                     </Grid>
                     <Grid item xs={10}>
-                        Andy K
+                    <Typography variant="h4"> Emily E.</Typography>
                     </Grid>
                     <Grid item xs={12} style={{marginTop: '10px'}}>
                         Helfer aus Berlin

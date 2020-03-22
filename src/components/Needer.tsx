@@ -80,7 +80,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                                 lng={(this.state.lng - 0.0039)}
                                 image={avatarImg001}
                                 clicked={this.state.clicked === 1}
-                                name="Andy K"
+                                name="Emily E."
                                 offerText="Kann für dich einen Einkauf für 20 € tätigen"
                                 distance="&lt; 30 m"
                             />
@@ -104,7 +104,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                                 <Avatar alt="" src={avatarImg001} />
                             </ListItemAvatar>
                             <ListItemText
-                                        primary="Andy K"
+                                        primary="Emily E."
                                         secondary="Kann für dich einen Einkauf für 20 € tätigen">
                             </ListItemText>
                             <ListItemText primary="&lt; 30 m">
@@ -135,7 +135,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                             </ListItemAvatar>
 
                             <ListItemText
-                                        primary="Armin R." secondary="Kann für dich einen Einkauf für 15 € tätigen">
+                                        primary="Franziska F." secondary="Kann für dich einen Einkauf für 15 € tätigen">
                             </ListItemText>
                             <ListItemText primary="&lt; 40 m">
 
