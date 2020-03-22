@@ -32,7 +32,15 @@ Nach bereits kurzer Zeit konnten wir unsere Gedanken zur Thematik konkretisieren
 
 ### What we learned
 
-coming soon...
+- die erste große Herausforderung bestand darin ein Projekt zu finden
+- wir haben es trotz des Zeitdrucks geschafft, die Aufgabe in einem angemessen Rahmen, zu lösen
+- mit neuen/fremden Kollegen zusammenzuarbeiten war für uns alle eine völlig neue Situation
+- eine große Herausforderung in der Programmierung bestand darin, alles remote zu konzipieren
+- Probleme gab es dabei die Kompetenzen jedes Teilnehmers richtig einzuschätzen
+- die Kommunikation zwischen allen zu koordinieren
+- wichtig ist eine klare Rollenverteilung und Grundstruktur (Dateien, To-Do)
+- externe Beratungen brachten neue Erkenntnisse
+- wir haben viel neues gelernt und Spaß gehabt
 
 ### Challenges we ran into
 
