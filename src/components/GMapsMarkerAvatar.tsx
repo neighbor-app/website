@@ -1,7 +1,8 @@
 import React, {CSSProperties} from 'react';
-import RoomIcon from '@material-ui/icons/Room';
+import {Avatar} from "@material-ui/core";
 
 interface ComponentProps {
+    image: string,
     lat: number,
     lng: number
 }
@@ -17,7 +18,7 @@ const markerStyles: CSSProperties = {
     top: -40 / 2,
 
     textAlign: 'center',
-    color: '#b5263b',
+    color: '#3f51b5',
     fontSize: 16,
     padding: 4
 };
@@ -26,7 +27,7 @@ class GMapsMarkerAvatar extends React.Component<ComponentProps, ComponentState> 
     render() {
         return (
             <div style={markerStyles}>
-                <RoomIcon fontSize="large" color="primary" />
+                <Avatar alt="" src={this.props.image} />
             </div>
         );
     }

@@ -5,7 +5,9 @@ import { Redirect } from "react-router-dom";
 import GoogleMapReact from 'google-map-react';
 
 import Header from './Header';
+import GMapsMarkerAvatar from './GMapsMarkerAvatar';
 import GMapsMarker from './GMapsMarker';
+
 import avatarImg001 from '../assets/images/avatar/001.jpg';
 import avatarImg002 from '../assets/images/avatar/002.jpg';
 import avatarImg003 from '../assets/images/avatar/003.jpg';
@@ -42,21 +44,22 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                             yesIWantToUseGoogleMapApiInternals
                             // onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
                         >
-                            <GMapsMarker
+                            <GMapsMarkerAvatar
                                 lat={52.519998}
                                 lng={13.40591047}
                                 image={avatarImg002}
                             />
-                            <GMapsMarker
+                            <GMapsMarkerAvatar
                                 lat={52.519098}
                                 lng={13.40001047}
                                 image={avatarImg001}
                             />
-                            <GMapsMarker
+                            <GMapsMarkerAvatar
                                 lat={52.519898}
                                 lng={13.41991047}
                                 image={avatarImg003}
                             />
+                            <GMapsMarker lat={52.519098} lng={13.40391047} />
                         </GoogleMapReact>
                     </Grid>
                         <Grid item xs={12} md={6}>
