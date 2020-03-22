@@ -10,8 +10,11 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import Img from 'react-image';
+
 import {Auth} from '../interfaces/auth'
 import {Helmet} from "react-helmet";
+import logo from '../logo.svg';
 
 interface ComponentProps {}
 interface ComponentState {
@@ -76,6 +79,7 @@ class Header extends React.Component<ComponentProps, ComponentState> {
                 </Helmet>
                 <AppBar position="static">
                     <Toolbar>
+                        <Img src={logo} style={{height: '40px', marginRight: '10px', marginLeft: '-10px'}} />
                         <IconButton edge="start" color="inherit" aria-label="menu" onClick={this.handleClick}>
                             <MenuIcon />
                         </IconButton>
