@@ -13,7 +13,11 @@ import Search from "./components/Search";
 import NewHelp from './components/NewHelp';
 import Login from "./components/Login";
 import Offer from './components/Offer';
-import UserView from "./components/UserView";
+import Chat from './components/Chat';
+import UserView from './components/UserView';
+import SelectCategory from './components/Category';
+
+
 
 ReactDOM.render(
   <Router>
@@ -37,6 +41,9 @@ ReactDOM.render(
               <Route path="/website/login">
                   <Login />
               </Route>
+              <Route path="/website/select">
+                  <SelectCategory />
+              </Route>
               <Route path="/website/search">
                   <Search />
               </Route>
@@ -46,8 +53,14 @@ ReactDOM.render(
               <Route path="/website/new-help">
                   <NewHelp />
               </Route>
+
+              <Route path="/website/chat">
+                  <Chat />
+                  </Route>
               <Route path="/website/user-detail/:id">
+
                   <UserView />
+
               </Route>
           </Switch>
       </Grid>

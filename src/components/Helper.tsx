@@ -68,6 +68,51 @@ class Helper extends React.Component<ComponentProps, ComponentState> {
 
                                 </ListItemText>
                             </ListItem>
+
+                            <Divider variant="inset" component="li" />
+
+                            <ListItem button onClick={this.handleToggle}>
+                                <ListItemAvatar>
+                                    <Avatar alt="" src="/media/avatar/1.jpg" />
+                                </ListItemAvatar>
+                                <ListItemText
+                                    primary="Philipp K."
+                                    secondary="Kann für dich mit dem Hund Gassi gehen">
+                                </ListItemText>
+                                <ListItemText primary="&lt; 30 m">
+
+                                </ListItemText>
+                            </ListItem>
+
+                            <Divider variant="inset" component="li" />
+
+                            <ListItem button onClick={this.handleToggle}>
+                                <ListItemAvatar>
+                                    <Avatar alt="" src="/media/avatar/2.jpg" />
+                                </ListItemAvatar>
+                                <ListItemText
+                                    primary="Marco P." secondary="Kann für dich mit dem Hund Gassi gehen">
+                                </ListItemText>
+                                <ListItemText primary="&lt; 10 m">
+
+                                </ListItemText>
+                            </ListItem>
+
+                            <Divider variant="inset" component="li" />
+
+                            <ListItem button onClick={this.handleToggle}>
+
+                                <ListItemAvatar>
+                                    <Avatar alt="" src="/media/avatar/3.jpg" />
+                                </ListItemAvatar>
+
+                                <ListItemText
+                                    primary="Tim S." secondary="Kann für dich mit dem Hund Gassi gehen">
+                                </ListItemText>
+                                <ListItemText primary="&lt; 40 m">
+
+                                </ListItemText>
+                            </ListItem>
                         </List>
                     </Grid>
                     <Grid item xs={12} style={{margin: '10px'}}>

@@ -1,13 +1,36 @@
 import React from 'react';
-import { Grid, Avatar, Button, Typography } from '@material-ui/core';
+
 import {Link} from "react-router-dom";
+import { Grid, Avatar, Button,  Typography, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@material-ui/core';
 import Header from './Header';
 
 interface ComponentProps {}
-interface ComponentState {}
+interface ComponentState {
+    requesting:boolean
+}
 
 class Offer extends React.Component<ComponentProps, ComponentState> {
-    state = { redirect: null };
+    constructor(props: ComponentProps) {
+        super(props);
+        
+        // Function binding
+        this.handleRequest = this.handleRequest.bind(this);
+        this.handleCloseRequest = this.handleCloseRequest.bind(this);
+
+        // Initial State
+        this.state = {
+            requesting: false,
+        }
+    }
+    
+    handleRequest(event?: React.SyntheticEvent, reason?: string) {
+        this.setState({ requesting: true});
+    }
+
+    handleCloseRequest(event?: React.SyntheticEvent, reason?: string) {
+        this.setState({ requesting: false});
+    }
+    
     render() {
         return (
             <>
@@ -29,15 +52,27 @@ class Offer extends React.Component<ComponentProps, ComponentState> {
                     <Typography variant="subtitle2">Ich kann für dich einen Einkauf für 20 € erledigen, Ich werden bei Rewe und Lidl gegen 15:00 einkaufen </Typography>
                     </Grid>
                             <Grid item>
-                                <Button variant="contained" color="primary">Nachricht senden</Button>
+                                <Link to="chat"><Button variant="contained" color="primary">Nachricht senden</Button></Link>
                             </Grid>
                             <Grid item>
-                                <Button variant="contained" color="primary">Einkauf anfragen</Button>
+                                <Button variant="contained" color="primary" onClick={this.handleRequest}>Einkauf anfragen</Button>
                             </Grid>
-                     </Grid>
-
-                 
+                    </Grid>
+                    <Dialog open={this.state.requesting}>
+                        <DialogTitle id="alert-dialog-title"></DialogTitle>
+                        <DialogContent>
+                        <DialogContentText id="alert-dialog-description">
+                            Deine Anfrage ist wurde gesendet
+                        </DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                        <Button onClick={this.handleCloseRequest} color="primary">
+                            Alles Klar
+                        </Button>
+                        </DialogActions>
+                    </Dialog>
                 </div>
+                
             </>
         );
     }
