@@ -20,33 +20,44 @@ class Home extends React.Component<ComponentProps, ComponentState> {
         return (
             <>
                <Header />
-               <div>
-                   <Img src={homeImg} style={{maxWidth: '100%'}} />
-               </div>
-                <Box
-                    style={{paddingRight: '100px'}}
-                >
-                    <Button
-                        component={Link}
-                        to="/website/helper"
-                        color="primary"
-                        variant="contained"
-                        style={{position: 'relative', top: '-50px'}}
-                    >
-                        Hilfe anbieten
-                    </Button>
-                </Box>
-                <Box>
-                    <Button
-                        component={Link}
-                        to="/website/search"
-                        color="primary"
-                        variant="contained"
-                        style={{position: 'relative', top: '-50px'}}
-                    >
-                        Hilfe suchen
-                    </Button>
-                </Box>
+                <Grid container justify="center" alignItems="center" style={{backgroundImage: `url(${homeImg})`, minHeight: '500px'}}>
+                    <Grid item xs={12} style={{textAlign: 'center', marginTop: '150px'}}>
+                        <Typography variant="h1" style={{
+                            color: '#fff'
+                        }}>
+                            Headline text
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} style={{textAlign: 'center'}}>
+                        <Typography variant="h4" style={{
+                            color: '#fff',
+                            marginTop: '-50px'
+                        }}>
+                            Subheadline text
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={6} style={{textAlign: 'center'}}>
+                        <Button
+                            component={Link}
+                            to="/website/helper"
+                            color="primary"
+                            variant="contained"
+                        >
+                            Hilfe anbieten
+                        </Button>
+                    </Grid>
+                    <Grid item xs={12} md={6} style={{textAlign: 'center'}}>
+                        <Button
+                            component={Link}
+                            to="/website/search"
+                            color="primary"
+                            variant="contained"
+                        >
+                            Hilfe suchen
+                        </Button>
+                    </Grid>
+                </Grid>
+
                 <Grid container spacing={2} style={{margin: '10px'}}>
                     <Grid item xs={12} md={6}>
                         <Typography variant="h6">
@@ -64,7 +75,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                             </ListItemText>
                         </ListItem>
 
-                        <Divider variant="inset" component="li" />
+                        <Divider variant="inset" />
 
                         <ListItem button>
                             <ListItemAvatar>
@@ -79,7 +90,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                             </ListItemText>
                         </ListItem>
 
-                        <Divider variant="inset" component="li" />
+                        <Divider variant="inset" />
 
                         <ListItem button>
 
@@ -111,7 +122,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                             </ListItemText>
                         </ListItem>
 
-                        <Divider variant="inset" component="li" />
+                        <Divider variant="inset" />
 
                         <ListItem button>
                             <ListItemAvatar>
@@ -126,7 +137,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                             </ListItemText>
                         </ListItem>
 
-                        <Divider variant="inset" component="li" />
+                        <Divider variant="inset" />
 
                         <ListItem button>
 
