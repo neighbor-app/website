@@ -3,6 +3,7 @@ import {Avatar, Divider, Grid, ListItem, ListItemText} from "@material-ui/core";
 import {RouteComponentProps, withRouter} from 'react-router';
 
 import Header from './Header';
+import avatarImg001 from '../assets/images/avatar/001.jpg';
 import Typography from "@material-ui/core/Typography";
 
 
@@ -20,13 +21,13 @@ class UserView extends React.Component<RouteComponentProps, ComponentState> {
                 <Header/>
                 <Grid container spacing={2} style={{margin: '10px'}}>
                     <Grid item xs={2}>
-                        <Avatar alt="" src="/media/avatar/1.jpg" />
+                        <Avatar alt="" src={avatarImg001} />
                     </Grid>
                     <Grid item xs={10}>
                         Andy K
                     </Grid>
                     <Grid item xs={12} style={{marginTop: '10px'}}>
-                        Helfer aus XXXX
+                        Helfer aus Berlin
                     </Grid>
                     <Grid item xs={12} style={{marginTop: '10px'}}>
                         <Typography variant="body1">
