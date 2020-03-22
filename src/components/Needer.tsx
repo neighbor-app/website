@@ -32,7 +32,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
         this.onGMarkerClick = this.onGMarkerClick.bind(this);
         this.handleGeolocation = this.handleGeolocation.bind(this);
 
-        navigator.geolocation.getCurrentPosition(this.handleGeolocation);
+       // navigator.geolocation.getCurrentPosition(this.handleGeolocation);
     }
 
     handleGeolocation(position: Position) {
