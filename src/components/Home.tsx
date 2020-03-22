@@ -22,38 +22,41 @@ class Home extends React.Component<ComponentProps, ComponentState> {
             <>
                <Header />
                 <Grid container justify="center" alignItems="center" style={{backgroundImage: `url(${homeImg})`, minHeight: '500px'}}>
-                    <Grid item xs={12} style={{textAlign: 'center', marginTop: '150px'}}>
-                        <Typography variant="h1" style={{
+                    <Grid item style={{ textAlign: 'center', marginTop: '100px'}}>
+                        <Typography variant="h1" align="center" style={{
                             color: '#fff'
                         }}>
                             Nachbarn wollen helfen
                         </Typography>
+                        <Grid container style={{marginTop: '75px'}}>
+                            <Grid item xs={6} style={{ textAlign: 'left'}}>
+                                <Button
+                                    component={Link}
+                                    to="/website/helper"
+                                    color="primary"
+                                    variant="contained"
+                                >
+                                    Hilfe anbieten
+                            </Button>
+                            </Grid>
+                            <Grid item xs={6} style={{ textAlign: 'right' }}>
+                                <Button
+                                    component={Link}
+                                    to="/website/select"
+                                    color="primary"
+                                    variant="contained"
+                                >
+                                    Hilfe suchen
+                            </Button>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} md={6} style={{textAlign: 'center'}}>
-                        <Button
-                            component={Link}
-                            to="/website/helper"
-                            color="primary"
-                            variant="contained"
-                        >
-                            Hilfe anbieten
-                        </Button>
-                    </Grid>
-                    <Grid item xs={12} md={6} style={{textAlign: 'center'}}>
-                        <Button
-                            component={Link}
-                            to="/website/select"
-                            color="primary"
-                            variant="contained"
-                        >
-                            Hilfe suchen
-                        </Button>
-                    </Grid>
+                    
                 </Grid>
                 <Grid item xs={12} style={{ textAlign: 'center' }}>
                     <Typography variant="h5" style={{
                         color: '#333',
-                        padding: '15px 100px 15px 100px',
+                        padding: '25px 150px 25px 150px',
                         display: 'inline-block'
                     }}>
                         Während der Krise konzentrieren wir uns auf die Verringerung der Einkaufenden in den Supermärkten. Zeigt wann ihr einkaufen geht oder was ihr benötigt. Erfahrt, für wen ihr Lebensmittel & Medikamente mitbringen könnt oder wer sie euch mitbringt. Helft euch und schützt unsere tapferen Kassierer*innen.
