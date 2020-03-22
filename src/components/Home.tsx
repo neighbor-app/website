@@ -50,7 +50,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                     <Grid item xs={12} md={6} style={{textAlign: 'center'}}>
                         <Button
                             component={Link}
-                            to="/website/search"
+                            to="/website/select"
                             color="primary"
                             variant="contained"
                         >
