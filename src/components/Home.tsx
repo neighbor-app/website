@@ -24,7 +24,8 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                 <Grid container justify="center" alignItems="center" style={{backgroundImage: `url(${homeImg})`, minHeight: '500px'}}>
                     <Grid item style={{ textAlign: 'center', marginTop: '100px'}}>
                         <Typography variant="h1" align="center" style={{
-                            color: '#fff'
+                            color: '#fff',
+                            textShadow: '2px 2px #000000'
                         }}>
                             Nachbarn wollen helfen
                         </Typography>
@@ -35,6 +36,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                                     to="/website/helper"
                                     color="primary"
                                     variant="contained"
+                                    style={{ height: '100px', width: '250px', fontSize: '18px'}}
                                 >
                                     Hilfe anbieten
                             </Button>
@@ -45,6 +47,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                                     to="/website/select"
                                     color="primary"
                                     variant="contained"
+                                    style={{ height: '100px', width: '250px', fontSize: '18px'}}
                                 >
                                     Hilfe suchen
                             </Button>
