@@ -3,6 +3,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import { Grid, Avatar, Button,  Typography, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@material-ui/core';
 import Header from './Header';
+import avatarImg001 from '../assets/images/avatar/001.jpg';
 
 interface ComponentProps {}
 interface ComponentState {
@@ -38,7 +39,7 @@ class Offer extends React.Component<ComponentProps, ComponentState> {
                 <div style={{maxWidth:"500px", marginTop:"40px"}}>
                     <Grid container spacing={3}>
                         <Grid item>
-                            <Avatar src="/media/avatar/1.jpg" style={{ width:"100px", height:"100px"}}/>
+                            <Avatar src={avatarImg001} style={{ width:"100px", height:"100px"}}/>
                         </Grid>
                         <Grid item>
                             <Typography variant="h5">
