@@ -22,15 +22,16 @@ interface ComponentState {}
 class NewHelp extends React.Component<ComponentProps, ComponentState> {
 
     selectedDate: Date = new Date();
+    currentTime: string;
 
+    constructor(props: ComponentProps) {
+        super(props);
 
+        this.currentTime = new Date().getHours() + ':00';
+    }
 
     handleDateChange( date :any ) {
-        console.log(date)
-        console.log(this);
         this.selectedDate = date;
-
-        console.log(this.selectedDate);
     }
 
     stores = [
@@ -78,6 +79,18 @@ class NewHelp extends React.Component<ComponentProps, ComponentState> {
                                     }}
                                 />
                             </MuiPickersUtilsProvider>
+                        </Grid>
+                        <Grid item>
+                            <TextField label="Zu welcher Uhrzeit kannst du einkaufen?" defaultValue={this.currentTime} style={{width: '350px'}}/>
+                        </Grid>
+                        <Grid item>
+                            <TextField label="Für wie viele Leute kannst du einkaufen?" defaultValue="1" type="number" style={{width: '350px'}}/>
+                        </Grid>
+                        <Grid item>
+                            <TextField label="Für wie viele € kannst du einkaufen?" defaultValue="10" type="number" style={{width: '350px'}}/>
+                        </Grid>
+                        <Grid item>
+                            <TextField label="Beschreibung deines Angebotes?" style={{width: '350px'}}/>
                         </Grid>
                         <Grid item>
                             <Autocomplete

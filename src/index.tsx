@@ -13,9 +13,13 @@ import Search from "./components/Search";
 import NewHelp from './components/NewHelp';
 import Login from "./components/Login";
 import Offer from './components/Offer';
+<<<<<<< HEAD
 import Chat from './components/Chat';
 
 
+=======
+import UserView from "./components/UserView";
+>>>>>>> f94d69222efe8de78ef3e48229379522123ca8aa
 
 ReactDOM.render(
   <Router>
@@ -48,8 +52,13 @@ ReactDOM.render(
               <Route path="/new-help">
                   <NewHelp />
               </Route>
+<<<<<<< HEAD
               <Route path="/chat">
                   <Chat />
+=======
+              <Route path="/user-detail/:id">
+                  <UserView />
+>>>>>>> f94d69222efe8de78ef3e48229379522123ca8aa
               </Route>
           </Switch>
       </Grid>
