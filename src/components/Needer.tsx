@@ -14,7 +14,9 @@ import avatarImg003 from '../assets/images/avatar/003.jpg';
 
 interface ComponentProps {}
 interface ComponentState {
-    clicked: number | null
+    clicked: number | null,
+    lat: number,
+    lng: number
 }
 
 class Needer extends React.Component<ComponentProps, ComponentState> {
@@ -22,15 +24,30 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
         super(props);
 
         this.state = {
-            clicked: null
+            clicked: null,
+            lat: 52.519098,
+            lng: 13.40391047
         };
 
         this.onGMarkerClick = this.onGMarkerClick.bind(this);
+        this.handleGeolocation = this.handleGeolocation.bind(this);
+
+        navigator.geolocation.getCurrentPosition(this.handleGeolocation);
+    }
+
+    handleGeolocation(position: Position) {
+        this.setState({
+            clicked: this.state.clicked,
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        });
     }
 
     onGMarkerClick(key: string, childProps: any) {
         this.setState({
-            clicked: parseInt(key)
+            clicked: parseInt(key),
+            lat: this.state.lat,
+            lng: this.state.lng
         });
     }
 
@@ -42,15 +59,15 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                     <Grid item xs={12} style={{ height: '50vh', width: '100%' }}>
                         <GoogleMapReact
                             bootstrapURLKeys={{ key: 'AIzaSyDawgu3zHf0qoi6ch1TGl35rO9viDOu5bQ' }}
-                            defaultCenter={{lat: 52.519098, lng: 13.40391047}}
+                            defaultCenter={{lat: this.state.lat, lng: this.state.lng}}
                             defaultZoom={15}
                             yesIWantToUseGoogleMapApiInternals
                             onChildClick={this.onGMarkerClick}
                         >
                             <GMapsMarkerAvatar
                                 key={0}
-                                lat={52.519998}
-                                lng={13.40591047}
+                                lat={(this.state.lat + 0.0009)}
+                                lng={(this.state.lng + 0.002)}
                                 image={avatarImg002}
                                 clicked={this.state.clicked === 0}
                                 name="Simon v. R."
@@ -59,8 +76,8 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                             />
                             <GMapsMarkerAvatar
                                 key={1}
-                                lat={52.519098}
-                                lng={13.40001047}
+                                lat={(this.state.lat + 0.0002)}
+                                lng={(this.state.lng - 0.0039)}
                                 image={avatarImg001}
                                 clicked={this.state.clicked === 1}
                                 name="Andy K"
@@ -69,15 +86,15 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                             />
                             <GMapsMarkerAvatar
                                 key={2}
-                                lat={52.519898}
-                                lng={13.41991047}
+                                lat={(this.state.lat + 0.0008)}
+                                lng={(this.state.lng + 0.016)}
                                 image={avatarImg003}
                                 clicked={this.state.clicked === 2}
                                 name="Armin R."
                                 offerText="Kann für dich einen Einkauf für 15 € tätigen"
                                 distance="&lt; 40 m"
                             />
-                            <GMapsMarker lat={52.519098} lng={13.40391047} />
+                            <GMapsMarker lat={this.state.lat} lng={this.state.lng} />
                         </GoogleMapReact>
                     </Grid>
                         <Grid item xs={12} md={6}>
