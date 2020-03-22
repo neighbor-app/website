@@ -25,7 +25,8 @@ const markerStyles: CSSProperties = {
     textAlign: 'center',
     color: '#3f51b5',
     fontSize: 16,
-    padding: 4
+    padding: 4,
+    cursor: 'pointer'
 };
 
 class GMapsMarkerAvatar extends React.Component<ComponentProps, ComponentState> {
@@ -34,7 +35,6 @@ class GMapsMarkerAvatar extends React.Component<ComponentProps, ComponentState> 
         if (this.props.clicked) {
             showBox = true;
         }
-        // console.log(this.props);
 
         return (
             <div style={markerStyles}>
