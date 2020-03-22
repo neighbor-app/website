@@ -1,17 +1,15 @@
-
 import React, {MouseEvent} from 'react';
 import { List,ListItem ,ListItemAvatar,ListItemText, Avatar,Divider } from '@material-ui/core';
-
-
 import { Redirect } from "react-router-dom";
 
-
-
 import Header from './Header';
+import avatarImg001 from '../assets/images/avatar/001.jpg';
+import avatarImg002 from '../assets/images/avatar/002.jpg';
+import avatarImg003 from '../assets/images/avatar/003.jpg';
+
 
 interface ComponentProps {}
 interface ComponentState {}
-
 
 
 class Needer extends React.Component<ComponentProps, ComponentState> {
@@ -37,7 +35,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                 <List style={{maxWidth:"500px",width:"100%"}} >
                     <ListItem button onClick={this.handleToggle.bind(this)}>
                     <ListItemAvatar>
-                        <Avatar alt="" src="/media/avatar/1.jpg" />
+                        <Avatar alt="" src={avatarImg001} />
                     </ListItemAvatar>
                     <ListItemText
                                 primary="Andy K"
@@ -52,7 +50,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
 
                     <ListItem button onClick={this.handleToggle.bind(this)}>
                     <ListItemAvatar>
-                        <Avatar alt="" src="/media/avatar/2.jpg" />
+                        <Avatar alt="" src={avatarImg002} />
                     </ListItemAvatar>
                     <ListItemText
                                 primary="Simon v. R." secondary="Kann für dich einen Einkauf für 30 € tätigen">
@@ -67,7 +65,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                     <ListItem button onClick={this.handleToggle.bind(this)}>
 
                     <ListItemAvatar>
-                        <Avatar alt="" src="/media/avatar/3.jpg" />
+                        <Avatar alt="" src={avatarImg003} />
                     </ListItemAvatar>
 
                     <ListItemText

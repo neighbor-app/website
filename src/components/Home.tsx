@@ -9,6 +9,9 @@ import { ListItemAvatar,Avatar,Divider } from '@material-ui/core';
 
 import Header from './Header';
 import homeImg from '../assets/images/home.jpg';
+import avatarImg001 from '../assets/images/avatar/001.jpg';
+import avatarImg002 from '../assets/images/avatar/002.jpg';
+import avatarImg003 from '../assets/images/avatar/003.jpg';
 
 interface ComponentProps {}
 interface ComponentState {}
@@ -63,7 +66,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                         </Typography>
                         <ListItem button component={Link} to="/website/offer">
                             <ListItemAvatar>
-                                <Avatar alt="" src="/media/avatar/2.jpg" />
+                                <Avatar alt=""  src={avatarImg002} />
                             </ListItemAvatar>
                             <ListItemText
                                 primary="Simon v. R." secondary="Kann für dich einen Einkauf für 30 € tätigen">
@@ -77,7 +80,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
 
                         <ListItem button component={Link} to="/website/offer">
                             <ListItemAvatar>
-                                <Avatar alt="" src="/media/avatar/1.jpg" />
+                                <Avatar alt="" src={avatarImg001} />
                             </ListItemAvatar>
                             <ListItemText
                                 primary="Andy K"
@@ -93,7 +96,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                         <ListItem button component={Link} to="/website/offer">
 
                             <ListItemAvatar>
-                                <Avatar alt="" src="/media/avatar/3.jpg" />
+                                <Avatar alt=""  src={avatarImg003} />
                             </ListItemAvatar>
 
                             <ListItemText
