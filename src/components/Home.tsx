@@ -29,14 +29,6 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                             Nachbarn wollen helfen
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} style={{textAlign: 'center'}}>
-                        <Typography variant="h4" style={{
-                            color: '#fff',
-                            marginTop: '-50px'
-                        }}>
-                            Subheadline text
-                        </Typography>
-                    </Grid>
                     <Grid item xs={12} md={6} style={{textAlign: 'center'}}>
                         <Button
                             component={Link}
@@ -58,7 +50,15 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                         </Button>
                     </Grid>
                 </Grid>
-
+                <Grid item xs={12} style={{ textAlign: 'center' }}>
+                    <Typography variant="h5" style={{
+                        color: '#333',
+                        padding: '15px 100px 15px 100px',
+                        display: 'inline-block'
+                    }}>
+                        Während der Krise konzentrieren wir uns auf die Verringerung der Einkaufenden in den Supermärkten. Zeigt wann ihr einkaufen geht oder was ihr benötigt. Erfahrt, für wen ihr Lebensmittel & Medikamente mitbringen könnt oder wer sie euch mitbringt. Helft euch und schützt unsere tapferen Kassierer*innen.
+                        </Typography>
+                </Grid>
                 <Grid container spacing={2} style={{margin: '10px'}}>
                     <Grid item xs={12} md={6}>
                         <Typography variant="h6">
