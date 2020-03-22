@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Avatar, Button, Typography } from '@material-ui/core';
+import {Link} from "react-router-dom";
 import Header from './Header';
 
 interface ComponentProps {}
@@ -17,7 +18,9 @@ class Offer extends React.Component<ComponentProps, ComponentState> {
                             <Avatar src="/media/avatar/1.jpg" style={{ width:"100px", height:"100px"}}/>
                         </Grid>
                         <Grid item>
-                            <Typography variant="h5">Andy K.</Typography>
+                            <Typography variant="h5">
+                                <Link to="/website/user-detail/1" style={{textDecoration: 'none', color: 'inherit'}}>Andy K.</Link>
+                            </Typography>
                             <Typography variant="subtitle2">Aus deiner Umgebung möchte helfen</Typography>
                         </Grid>
                     </Grid>

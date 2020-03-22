@@ -1,8 +1,6 @@
 import React from 'react';
-import Img from 'react-image';
 import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
 import Grid from "@material-ui/core/Grid";
 import Typography from '@material-ui/core/Typography';
 import ListItem from '@material-ui/core/ListItem';
@@ -63,7 +61,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                         <Typography variant="h6">
                             Helfer in deiner Nähe
                         </Typography>
-                        <ListItem button>
+                        <ListItem button component={Link} to="/website/offer">
                             <ListItemAvatar>
                                 <Avatar alt="" src="/media/avatar/2.jpg" />
                             </ListItemAvatar>
@@ -77,7 +75,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
 
                         <Divider variant="inset" />
 
-                        <ListItem button>
+                        <ListItem button component={Link} to="/website/offer">
                             <ListItemAvatar>
                                 <Avatar alt="" src="/media/avatar/1.jpg" />
                             </ListItemAvatar>
@@ -92,7 +90,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
 
                         <Divider variant="inset" />
 
-                        <ListItem button>
+                        <ListItem button component={Link} to="/website/offer">
 
                             <ListItemAvatar>
                                 <Avatar alt="" src="/media/avatar/3.jpg" />
