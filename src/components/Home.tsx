@@ -12,7 +12,9 @@ import homeImg from '../assets/images/home.jpg';
 import avatarImg001 from '../assets/images/avatar/001.jpg';
 import avatarImg002 from '../assets/images/avatar/002.jpg';
 import avatarImg003 from '../assets/images/avatar/003.jpg';
-
+import avatarImg004 from '../assets/images/avatar/004.jpg';
+import avatarImg005 from '../assets/images/avatar/005.jpg';
+import avatarImg006 from '../assets/images/avatar/006.jpg';
 interface ComponentProps {}
 interface ComponentState {}
 
@@ -89,7 +91,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                                 <Avatar alt="" src={avatarImg001} />
                             </ListItemAvatar>
                             <ListItemText
-                                primary="Andy K"
+                                primary="Emily E."
                                 secondary="Kann für dich einen Einkauf für 20 € tätigen">
                             </ListItemText>
                             <ListItemText primary="&lt; 30 m">
@@ -106,7 +108,7 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                             </ListItemAvatar>
 
                             <ListItemText
-                                primary="Armin R." secondary="Kann für dich einen Einkauf für 15 € tätigen">
+                                primary="Franziska F." secondary="Kann für dich einen Einkauf für 15 € tätigen">
                             </ListItemText>
                             <ListItemText primary="&lt; 40 m">
 
@@ -119,10 +121,10 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                         </Typography>
                         <ListItem button>
                             <ListItemAvatar>
-                                <Avatar alt="" src="/media/avatar/2.jpg" />
+                                <Avatar alt="" src={avatarImg004} />
                             </ListItemAvatar>
                             <ListItemText
-                                primary="Simon v. R." secondary="Braucht einen Einkauf für 30 €">
+                                primary="Philipp K." secondary="Braucht einen Einkauf für 30 €">
                             </ListItemText>
                             <ListItemText primary="&lt; 10 m">
 
@@ -133,10 +135,10 @@ class Home extends React.Component<ComponentProps, ComponentState> {
 
                         <ListItem button>
                             <ListItemAvatar>
-                                <Avatar alt="" src="/media/avatar/1.jpg" />
+                                <Avatar alt="" src={avatarImg005} />
                             </ListItemAvatar>
                             <ListItemText
-                                primary="Andy K"
+                                primary="Marco P."
                                 secondary="Braucht einen Einkauf für 20 €">
                             </ListItemText>
                             <ListItemText primary="&lt; 30 m">
@@ -149,11 +151,11 @@ class Home extends React.Component<ComponentProps, ComponentState> {
                         <ListItem button>
 
                             <ListItemAvatar>
-                                <Avatar alt="" src="/media/avatar/3.jpg" />
+                                <Avatar alt="" src={avatarImg006} />
                             </ListItemAvatar>
 
                             <ListItemText
-                                primary="Armin R." secondary="Braucht einen Einkauf für 15 €">
+                                primary="Tim S." secondary="Braucht einen Einkauf für 15 €">
                             </ListItemText>
                             <ListItemText primary="&lt; 40 m">
 

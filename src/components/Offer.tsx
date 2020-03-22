@@ -39,11 +39,11 @@ class Offer extends React.Component<ComponentProps, ComponentState> {
                 <div style={{maxWidth:"500px", marginTop:"40px"}}>
                     <Grid container spacing={3}>
                         <Grid item>
-                            <Avatar src={avatarImg001} style={{ width:"100px", height:"100px"}}/>
+                        <Link to="/website/user-detail/1" style={{textDecoration: 'none', color: 'inherit'}}><Avatar src={avatarImg001} style={{ width:"100px", height:"100px"}}/></Link>
                         </Grid>
                         <Grid item>
                             <Typography variant="h5">
-                                <Link to="/website/user-detail/1" style={{textDecoration: 'underline', color: 'inherit'}}>Andy K.</Link>
+                                <Link to="/website/user-detail/1" style={{textDecoration: 'none', color: 'inherit'}}>Emily E.</Link>
                             </Typography>
                             <Typography variant="subtitle2">Aus deiner Umgebung möchte helfen</Typography>
                         </Grid>
