@@ -1,10 +1,15 @@
 import React, {CSSProperties} from 'react';
-import {Avatar} from "@material-ui/core";
+import {Avatar, ListItem, ListItemText} from "@material-ui/core";
 
 interface ComponentProps {
     image: string,
     lat: number,
-    lng: number
+    lng: number,
+    clicked: boolean,
+    key: number,
+    name: string,
+    offerText: string,
+    distance: string
 }
 interface ComponentState {}
 
@@ -25,9 +30,31 @@ const markerStyles: CSSProperties = {
 
 class GMapsMarkerAvatar extends React.Component<ComponentProps, ComponentState> {
     render() {
+        let showBox: boolean = false;
+        if (this.props.clicked) {
+            showBox = true;
+        }
+        // console.log(this.props);
+
         return (
             <div style={markerStyles}>
                 <Avatar alt="" src={this.props.image} />
+                {showBox ?
+                    <div style={{
+                        backgroundColor: '#fff',
+                        width: '350px'
+                    }}>
+                        <ListItem>
+                            <ListItemText
+                                primary={this.props.name}
+                                secondary={this.props.offerText}>
+                            </ListItemText>
+                            <ListItemText primary={this.props.distance}>
+
+                            </ListItemText>
+                        </ListItem>
+                    </div>
+                : ''}
             </div>
         );
     }
