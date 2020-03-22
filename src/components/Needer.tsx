@@ -1,7 +1,7 @@
-import React, {MouseEvent} from 'react';
+import React from 'react';
 import { List,ListItem ,ListItemAvatar,ListItemText, Avatar,Divider } from '@material-ui/core';
 import Grid from "@material-ui/core/Grid";
-import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import GoogleMapReact from 'google-map-react';
 
 import Header from './Header';
@@ -13,25 +13,28 @@ import avatarImg002 from '../assets/images/avatar/002.jpg';
 import avatarImg003 from '../assets/images/avatar/003.jpg';
 
 interface ComponentProps {}
-interface ComponentState {}
+interface ComponentState {
+    clicked: number | null
+}
 
 class Needer extends React.Component<ComponentProps, ComponentState> {
-    state = { redirect: null };
-    
-    handleToggle(event: MouseEvent) {
-        this.setState({ redirect: "/website/offer" });
+    constructor(props: ComponentProps) {
+        super(props);
 
-    };
+        this.state = {
+            clicked: null
+        };
+
+        this.onGMarkerClick = this.onGMarkerClick.bind(this);
+    }
+
+    onGMarkerClick(key: string, childProps: any) {
+        this.setState({
+            clicked: parseInt(key)
+        });
+    }
 
     render() {
-   
-        if (this.state.redirect) {
-            // wieso muss das denn so unschön sein?
-            // @ts-ignore
-            return <Redirect to={this.state.redirect} />
-        }
-     
-   
         return (
             <>
              <Header />
@@ -42,29 +45,44 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
                             defaultCenter={{lat: 52.519098, lng: 13.40391047}}
                             defaultZoom={15}
                             yesIWantToUseGoogleMapApiInternals
-                            // onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
+                            onChildClick={this.onGMarkerClick}
                         >
                             <GMapsMarkerAvatar
+                                key={0}
                                 lat={52.519998}
                                 lng={13.40591047}
                                 image={avatarImg002}
+                                clicked={this.state.clicked === 0}
+                                name="Simon v. R."
+                                offerText="Kann für dich einen Einkauf für 30 € tätigen"
+                                distance="&lt; 10 m"
                             />
                             <GMapsMarkerAvatar
+                                key={1}
                                 lat={52.519098}
                                 lng={13.40001047}
                                 image={avatarImg001}
+                                clicked={this.state.clicked === 1}
+                                name="Andy K"
+                                offerText="Kann für dich einen Einkauf für 20 € tätigen"
+                                distance="&lt; 30 m"
                             />
                             <GMapsMarkerAvatar
+                                key={2}
                                 lat={52.519898}
                                 lng={13.41991047}
                                 image={avatarImg003}
+                                clicked={this.state.clicked === 2}
+                                name="Armin R."
+                                offerText="Kann für dich einen Einkauf für 15 € tätigen"
+                                distance="&lt; 40 m"
                             />
                             <GMapsMarker lat={52.519098} lng={13.40391047} />
                         </GoogleMapReact>
                     </Grid>
                         <Grid item xs={12} md={6}>
                         <List >
-                            <ListItem button onClick={this.handleToggle.bind(this)}>
+                            <ListItem button component={Link} to="/website/offer">
                             <ListItemAvatar>
                                 <Avatar alt="" src={avatarImg001} />
                             </ListItemAvatar>
@@ -79,7 +97,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
 
                             <Divider variant="inset" component="li" />
 
-                            <ListItem button onClick={this.handleToggle.bind(this)}>
+                            <ListItem button component={Link} to="/website/offer">
                             <ListItemAvatar>
                                 <Avatar alt="" src={avatarImg002} />
                             </ListItemAvatar>
@@ -93,7 +111,7 @@ class Needer extends React.Component<ComponentProps, ComponentState> {
 
                             <Divider variant="inset" component="li" />
 
-                            <ListItem button onClick={this.handleToggle.bind(this)}>
+                            <ListItem button component={Link} to="/website/offer">
 
                             <ListItemAvatar>
                                 <Avatar alt="" src={avatarImg003} />
