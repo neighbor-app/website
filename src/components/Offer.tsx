@@ -19,7 +19,7 @@ class Offer extends React.Component<ComponentProps, ComponentState> {
                         </Grid>
                         <Grid item>
                             <Typography variant="h5">
-                                <Link to="/website/user-detail/1" style={{textDecoration: 'none', color: 'inherit'}}>Andy K.</Link>
+                                <Link to="/website/user-detail/1" style={{textDecoration: 'underline', color: 'inherit'}}>Andy K.</Link>
                             </Typography>
                             <Typography variant="subtitle2">Aus deiner Umgebung möchte helfen</Typography>
                         </Grid>
